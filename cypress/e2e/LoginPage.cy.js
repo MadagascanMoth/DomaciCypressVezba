@@ -53,5 +53,6 @@ describe("Login test cases", ()=>{
         cy.get('input[id="email"]').clear().type("red@gmail.com");
         cy.get('input[id="password"]').clear().type("357753357");
         cy.get('button[type="submit"]').click();
+        cy.get('a[role="button "]').click();
     })
 })

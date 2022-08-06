@@ -1,0 +1,24 @@
+{
+    "login":{
+        "emailInput":"input[id='email']",
+        "passwordInput":"input[id='password']",
+        "submitButton":"button[type='submit']"
+    },
+
+    "header":{
+        "loginButton":"a[href='/login']",
+        "logoutButton":"a[role='button ']",
+        "registerButton":"a[href='/register']"
+
+    },
+
+    "register":{
+        "registerSubmitButton":"button[type='submit']",
+        "inputFirstName":"input[id='first-name']",
+        "inputLastName":"input[id='last-name']",
+        "inputRegisterEmail":"input[id='email']",
+        "inputRegisterPassword":"input[id='password']",
+        "inputRegisterConfirmationPassword":"input[id='password-confirmation']",
+        "registerCheckBox":"input[type='checkbox']"
+    }
+}
