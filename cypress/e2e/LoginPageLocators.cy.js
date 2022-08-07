@@ -1,6 +1,6 @@
 /// <reference types="Cypress" />
 
-const locators = require("./../fixtures/locators.json")
+const locators = require("./../fixtures/locators.json");
 
 describe("Login test cases", ()=>{
     beforeEach(()=>{

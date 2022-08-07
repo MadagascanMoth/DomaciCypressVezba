@@ -8,7 +8,8 @@
     "header":{
         "loginButton":"a[href='/login']",
         "logoutButton":"a[role='button ']",
-        "registerButton":"a[href='/register']"
+        "registerButton":"a[href='/register']",
+        "createGalleryButton":"a[href='/create']"
 
     },
 
@@ -20,5 +21,16 @@
         "inputRegisterPassword":"input[id='password']",
         "inputRegisterConfirmationPassword":"input[id='password-confirmation']",
         "registerCheckBox":"input[type='checkbox']"
+    },
+
+    "gallery":{
+        "createGallerySubmitButton":"form > button:nth-of-type(1)",
+        "createGalleryTitle":"input[id='title']",
+        "createURL":"input[type='url']",
+        "createGalleryDescription":"input#description",
+        "createGalleryCancelButton":"form > button:nth-of-type(2)",
+        "addButton":":nth-child(2) div:nth-child(1) div:nth-child(1) form:nth-child(2) div:nth-child(3) > button:nth-child(3)"
     }
+
+    
 }

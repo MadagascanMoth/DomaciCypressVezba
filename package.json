@@ -1,14 +1,23 @@
 {
   "name": "vezbanjecypress",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
-    "cypress": "./node_modules/.bin/cypress open"
+    "cypress": "cypress open"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "cypress": "^10.4.0"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MadagascanMoth/DomaciCypressVezba.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MadagascanMoth/DomaciCypressVezba/issues"
+  },
+  "homepage": "https://github.com/MadagascanMoth/DomaciCypressVezba#readme",
+  "description": ""
 }
