@@ -53,5 +53,6 @@ describe("Login test cases", ()=>{
         cy.get(locators.login.passwordInput).type("357753357");
         cy.get(locators.login.submitButton).click();
         cy.get(locators.header.logoutButton).click();
+  
     })
 })
