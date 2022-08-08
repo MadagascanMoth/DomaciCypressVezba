@@ -160,9 +160,101 @@ describe ("Registration test cases",()=>{
 
     })
 
+    it("Registration with minimum (2) characters First name",()=>{
+        cy.get(locators.register.inputFirstName).type("Ha");
+        cy.get(locators.register.inputLastName).type("Havarija");
+        cy.get(locators.register.inputRegisterEmail).type("havarija@gmail.com");
+        cy.get(locators.register.inputRegisterPassword).type("havarija1");
+        cy.get(locators.register.inputRegisterConfirmationPassword).type("havarija1");
+        cy.get(locators.register.registerCheckBox).check();
+        cy.get(locators.register.registerSubmitButton).click();
+
+    })
+
+    it("Registration with maximum (255) characters First name",()=>{
+        cy.get(locators.register.inputFirstName).type("hVc0ym6BiULEWPwCvcQgN2he8KW0xQ5KKI6jh2ORKyINiawUh50w3e6uligKXyrOCHDGhcsJPZCIPlKei4dwuFDtlYa1V7ZlGf8hnDnuAEfRB7SgtjiuiifwBhFoaejrlGv70Ri6Jfxy1Zegbsyurif0VuMBO33NA8pA4nDDOWlOlptkir25tgzE7lymATnqBC8xkZQ7DQt1FytJ6EG2KeI5C2kbrurjhJI57z3ogrCdgRRBLInp3dCF6pq5l6C");
+        cy.get(locators.register.inputLastName).type("Havarija");
+        cy.get(locators.register.inputRegisterEmail).type("havarija@gmail.com");
+        cy.get(locators.register.inputRegisterPassword).type("havarija1");
+        cy.get(locators.register.inputRegisterConfirmationPassword).type("havarija1");
+        cy.get(locators.register.registerCheckBox).check();
+        cy.get(locators.register.registerSubmitButton).click();
+
+    })
+
+    it("Registration with maximum (255) characters last name",()=>{
+        cy.get(locators.register.inputFirstName).type("Havarija");
+        cy.get(locators.register.inputLastName).type("hVc0ym6BiULEWPwCvcQgN2he8KW0xQ5KKI6jh2ORKyINiawUh50w3e6uligKXyrOCHDGhcsJPZCIPlKei4dwuFDtlYa1V7ZlGf8hnDnuAEfRB7SgtjiuiifwBhFoaejrlGv70Ri6Jfxy1Zegbsyurif0VuMBO33NA8pA4nDDOWlOlptkir25tgzE7lymATnqBC8xkZQ7DQt1FytJ6EG2KeI5C2kbrurjhJI57z3ogrCdgRRBLInp3dCF6pq5l6C");
+        cy.get(locators.register.inputRegisterEmail).type("havarija@gmail.com");
+        cy.get(locators.register.inputRegisterPassword).type("havarija1");
+        cy.get(locators.register.inputRegisterConfirmationPassword).type("havarija1");
+        cy.get(locators.register.registerCheckBox).check();
+        cy.get(locators.register.registerSubmitButton).click();
+
+    })
+
+    it("Registration with minimum (2) characters Flast name",()=>{
+        cy.get(locators.register.inputFirstName).type("Havarija");
+        cy.get(locators.register.inputLastName).type("Ha");
+        cy.get(locators.register.inputRegisterEmail).type("havarija@gmail.com");
+        cy.get(locators.register.inputRegisterPassword).type("havarija1");
+        cy.get(locators.register.inputRegisterConfirmationPassword).type("havarija1");
+        cy.get(locators.register.registerCheckBox).check();
+        cy.get(locators.register.registerSubmitButton).click();
+
+    })
+
+    it("Registration with special characters First and Last Name",()=>{
+        cy.get(locators.register.inputFirstName).type("%%%");
+        cy.get(locators.register.inputLastName).type("^^^");
+        cy.get(locators.register.inputRegisterEmail).type("havarija@gmail.com");
+        cy.get(locators.register.inputRegisterPassword).type("havarija1");
+        cy.get(locators.register.inputRegisterConfirmationPassword).type("havarija1");
+        cy.get(locators.register.registerCheckBox).check();
+        cy.get(locators.register.registerSubmitButton).click();
+
+    })
+
+    it("Registration with unicode characters First and Last Name",()=>{
+        cy.get(locators.register.inputFirstName).type("ššš");
+        cy.get(locators.register.inputLastName).type("šđđđ");
+        cy.get(locators.register.inputRegisterEmail).type("havarija@gmail.com");
+        cy.get(locators.register.inputRegisterPassword).type("havarija1");
+        cy.get(locators.register.inputRegisterConfirmationPassword).type("havarija1");
+        cy.get(locators.register.registerCheckBox).check();
+        cy.get(locators.register.registerSubmitButton).click();
+
+    })
+
+    it("Registration with password using space",()=>{
+        cy.get(locators.register.inputFirstName).type("Havarija");
+        cy.get(locators.register.inputLastName).type("Havarija");
+        cy.get(locators.register.inputRegisterEmail).type("havarija@gmail.com");
+        cy.get(locators.register.inputRegisterPassword).type("havarija1 ");
+        cy.get(locators.register.inputRegisterConfirmationPassword).type("havarija1 ");
+        cy.get(locators.register.registerCheckBox).check();
+        cy.get(locators.register.registerSubmitButton).click();
+
+    })
+
+    it("Registration with password using all digits",()=>{
+        cy.get(locators.register.inputFirstName).type("Havarija");
+        cy.get(locators.register.inputLastName).type("Havarija");
+        cy.get(locators.register.inputRegisterEmail).type("havarija@gmail.com");
+        cy.get(locators.register.inputRegisterPassword).type("357753357");
+        cy.get(locators.register.inputRegisterConfirmationPassword).type("357753357");
+        cy.get(locators.register.registerCheckBox).check();
+        cy.get(locators.register.registerSubmitButton).click();
+
+    })
 
 
-   
+
+
+
+
+
+
 
 
 

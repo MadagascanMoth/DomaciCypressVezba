@@ -9,7 +9,7 @@
   "license": "ISC",
   "dependencies": {
     "cypress": "^10.4.0",
-    "faker": "^6.6.6"
+    "faker": "^5.5.3"
   },
   "repository": {
     "type": "git",

@@ -1,5 +1,7 @@
 /// <reference types="Cypress" />
 
+
+
 describe ("Registration test cases",()=>{
     it("Visit gallery app page",()=>{
         cy.visit("/")
