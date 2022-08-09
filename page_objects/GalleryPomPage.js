@@ -5,17 +5,20 @@ class CreateGallery {
     }
 
     get createUrl (){
-        return cy.get ("input[type='url']");
+        return cy.get ("input[type='url']").first();
     }
 
     get createGalleryDescription(){
         return cy.get ("input#description");
+
     }
 
+    
     create (title, description, url){
         this.createGalleryTitle.type(title);
         this.createGalleryDescription.type(description);
-        this.createUrl.type(url)
+        this.createUrl.type(url);
+    
     }
 }
 

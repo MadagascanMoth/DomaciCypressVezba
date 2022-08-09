@@ -39,6 +39,10 @@ class Navigation{
         return cy.get ("form > button:nth-of-type(2)");
     }
 
+    get deleteButton(){
+        return cy.get (":nth-child(2) > .input-group > .input-group-append > :nth-child(1) > .fas");
+    }
+
 
     clickOnLoginButton(){
         this.loginButton.click();
@@ -78,6 +82,10 @@ class Navigation{
 
     clickOnLoginSubmitButton(){
         this.loginSubmitButton.click();
+    }
+
+    clickOnDeleteButton(){
+        this.deleteButton.click();
     }
 
 
