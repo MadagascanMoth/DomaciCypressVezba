@@ -43,6 +43,10 @@ class Navigation{
         return cy.get (":nth-child(2) > .input-group > .input-group-append > :nth-child(1) > .fas");
     }
 
+    get myGalleryButton(){
+        return cy.get("a[href='/my-galleries']");
+    }
+
 
     clickOnLoginButton(){
         this.loginButton.click();
