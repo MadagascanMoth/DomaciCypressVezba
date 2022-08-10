@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/MadagascanMoth/DomaciCypressVezba#readme",
   "devDependencies": {
-    "@faker-js/faker": "^7.3.0"
+    "@faker-js/faker": "^7.4.0"
   },
   "description": ""
 }

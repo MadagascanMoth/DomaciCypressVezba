@@ -29,7 +29,7 @@ class RegisterPomPage{
         return cy.get ("input[type='checkbox']");
     }
 
-    registration(FirstName, LastName, email, password, confirmedPassword) {
+    registration(FirstName, LastName, email, password, confirmedPassword ){
         this.registerFirstName.type(FirstName);
         this.registerLastName.type(LastName);
         this.registerEmail.type(email);
@@ -37,10 +37,20 @@ class RegisterPomPage{
         this.registerConfirmedPassword.type(confirmedPassword);
         this.registerCheckBox.check();
         this.registerSubmitButton.click();
+        
     }
 
+    registrationUncheck(FirstName,LastName, email, password, confirmedPassword){
+        this.registerFirstName.type(FirstName);
+        this.registerLastName.type(LastName);
+        this.registerEmail.type(email);
+        this.registerPassword.type(password);
+        this.registerConfirmedPassword.type(confirmedPassword);
+        this.registerSubmitButton.click();
 
-   
-}
+    }
+
+} 
+
 
 export const registerPomPage = new RegisterPomPage();

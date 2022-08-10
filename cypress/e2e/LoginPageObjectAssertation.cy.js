@@ -36,11 +36,11 @@ describe("Login test cases", ()=>{
 
 
 
-    it("Login without valid credentials",()=>{
+    it.only("Login without valid credentials",()=>{
         cy.url().should("contain", "/login");
         general.headerTitle.should("have.text", "Please login");
         loginPOMPage.login(faker.internet.email(), faker.internet.password());
-        general.errorMessageLogin.should("have.text", "Bad Credentials")
+        general.errorMessage.should("have.text", "Bad Credentials")
         .and("have.css", "background-color","rgb(248, 215, 218)" )
         .and("have.css", "color","rgb(114, 28, 36)" );
         navigation.loginSubmitButton.should("exist");

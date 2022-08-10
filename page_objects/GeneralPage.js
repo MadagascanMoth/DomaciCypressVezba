@@ -1,11 +1,13 @@
 class General {
     get headerTitle(){
-        return cy.get(".title-style");
+        return cy.get("h1");
     }
 
     get errorMessage (){
         return cy.get("p[class='alert alert-danger']");
     }
+
+    
 
     
 

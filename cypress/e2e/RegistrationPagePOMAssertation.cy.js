@@ -38,8 +38,8 @@ describe ("Registration test cases",()=>{
     })
 
     it("Registration without accepted terms and conditions",()=>{
-        registerPomPage.registration(faker.name.firstName(), faker.name.lastName(), faker.internet.email(), "357753357", "357753357");
-        registerPomPage.registerCheckBox.uncheck();
+        registerPomPage.registrationUncheck(faker.name.firstName(), faker.name.lastName(), faker.internet.email(), "357753357", "357753357");
+
         general.errorMessage.should("have.text", "The terms and conditions must be accepted.")
         .and("have.css","background-color", "rgb(248, 215, 218)")
         .and("have.css", "color", "rgb(114, 28, 36)");
@@ -125,7 +125,7 @@ describe ("Registration test cases",()=>{
 
         registerPomPage.registration(faker.name.firstName(), faker.name.lastName(), faker.internet.email(), "havarijaa","havarijaa");
         
-        navigation.errorMessage.should("have.text","The password format is invalid.");
+        general.errorMessage.should("have.text","The password format is invalid.");
         navigation.loginButton.should("exist");
         navigation.registerButton.should("exist");
         navigation.registerSubmitButton.should("exist");
@@ -137,7 +137,7 @@ describe ("Registration test cases",()=>{
 
         registerPomPage.registration(faker.name.firstName(), faker.name.lastName(), faker.internet.email(), "357753357", faker.internet.password());
         
-        navigation.errorMessage.should("have.text","The password confirmation does not match.");
+        general.errorMessage.should("have.text","The password confirmation does not match.");
         navigation.loginButton.should("exist");
         navigation.registerButton.should("exist");
         navigation.registerSubmitButton.should("exist");
@@ -147,9 +147,9 @@ describe ("Registration test cases",()=>{
 
     it("Registration with already taken email",()=>{
 
-        registerPomPage.registration(faker.name.firstName(),faker.name.lastName(), "red@gmailcom", "357753357", "357753357");
+        registerPomPage.registration(faker.name.firstName(),faker.name.lastName(), "red@gmail.com", "357753357", "357753357");
         
-        navigation.errorMessage.should("have.text","The email has already been taken.");
+        general.errorMessage.should("have.text","The email has already been taken.");
         navigation.loginButton.should("exist");
         navigation.registerButton.should("exist");
         navigation.registerSubmitButton.should("exist");

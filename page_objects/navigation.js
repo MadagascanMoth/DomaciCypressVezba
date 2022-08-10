@@ -46,6 +46,13 @@ class Navigation{
     get myGalleryButton(){
         return cy.get("a[href='/my-galleries']");
     }
+    get createdGallery (){
+        return cy.get ("a[href='/galleries/1800']");
+    }
+    
+    
+
+
 
 
     clickOnLoginButton(){
@@ -92,7 +99,16 @@ class Navigation{
         this.deleteButton.click();
     }
 
+    clickOnMyGalleryButton(){
+        this.myGalleryButton.click();
+    }
+
+ 
+
+    
+
 
 }
 
 export const navigation = new Navigation ()
+
