@@ -36,7 +36,7 @@ describe("Login test cases", ()=>{
 
 
 
-    it.only("Login without valid credentials",()=>{
+    it("Login without valid credentials",()=>{
         cy.url().should("contain", "/login");
         general.headerTitle.should("have.text", "Please login");
         loginPOMPage.login(faker.internet.email(), faker.internet.password());
