@@ -4,7 +4,7 @@ class General {
     }
 
     get errorMessage (){
-        return cy.get("p[class='alert alert-danger']");
+        return cy.get("[class='alert alert-danger']");
     }
 
     
